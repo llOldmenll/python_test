@@ -1,15 +1,13 @@
 import tkinter
 from tkinter import *
-from tkinter import messagebox
 
 window = tkinter.Tk()
 
 
-def showMessage():
-    messagebox.showinfo("Title", "Message")
+labelFrame = LabelFrame(window, text="It's LABEL!!!")
+labelFrame.pack(fill=BOTH, expand="yes")
 
-
-btn = Button(window, text="Click me", command=showMessage)
-btn.pack()
+left = Label(labelFrame, text="Inside label!!!!")
+left.pack()
 
 window.mainloop()
