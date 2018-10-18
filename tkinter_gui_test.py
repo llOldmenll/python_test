@@ -2,8 +2,8 @@ import tkinter
 from tkinter import *
 
 window = tkinter.Tk()
-window.title("Main")
 
-topL = Toplevel()
-topL.title("Child")
-topL.mainloop()
+spin = Spinbox(window, from_=0, to=10)
+spin.pack()
+
+window.mainloop()
