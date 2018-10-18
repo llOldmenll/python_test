@@ -3,14 +3,15 @@ from tkinter import *
 
 window = tkinter.Tk()
 
-scrollBar = Scrollbar(window)
-scrollBar.pack(side=RIGHT, fill=Y)
+text = Text(window)
+text.insert(INSERT, "Hello ")
+text.insert(END, "BYE, BYE.....")
+text.pack()
 
-list = Listbox(window, yscrollcommand=scrollBar.set)
-for line in range(1000):
-    list.insert(END, "Row: " + str(line + 1))
-list.pack()
+text.tag_add("here", "1.0", "1.4")
+text.tag_add("start", "1.8", "1.13")
 
-scrollBar.config(command=list.yview)
+text.tag_config("here", background="yellow", foreground="blue")
+text.tag_config("start", background="grey", foreground="white")
 
 window.mainloop()
